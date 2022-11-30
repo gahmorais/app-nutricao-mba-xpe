@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="br.com.gabrielmorais.desafiomodulo3mbaxpe.ui.fragments.MainFragment"
+        android:label="Tela Principal"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_nutritionEvalFragment"
+            app:destination="@id/nutritionEvalFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_nutritionGuidanceFragment"
+            app:destination="@id/nutritionGuidanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutritionEvalFragment"
+        android:name="br.com.gabrielmorais.desafiomodulo3mbaxpe.ui.fragments.NutritionEvalFragment"
+        android:label="Avaliação Nutricional"
+        tools:layout="@layout/fragment_nutrition_eval" />
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="br.com.gabrielmorais.desafiomodulo3mbaxpe.ui.fragments.FoodListFragment"
+        android:label="Lista de Alimentos"
+        tools:layout="@layout/fragment_food_list" />
+    <fragment
+        android:id="@+id/nutritionGuidanceFragment"
+        android:name="br.com.gabrielmorais.desafiomodulo3mbaxpe.ui.fragments.NutritionGuidanceFragment"
+        android:label="Orientação Nutricional"
+        tools:layout="@layout/fragment_nutrition_guidance" />
+</navigation>
